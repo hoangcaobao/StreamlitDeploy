@@ -3,5 +3,6 @@ Pillow
 opencv-python
 torch
 torchvision
+opencv
 numpy
 requests
