@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import random 
-import cv2
 import torch
 import torchvision.transforms as transforms
 import numpy as np
@@ -45,8 +44,8 @@ if uploaded_image is not None:
 
     # Resize
     image_np = np.array(image)
-    image_resized = cv2.resize(image_np, (256, 256), interpolation=cv2.INTER_CUBIC)
-    image = Image.fromarray(image_resized)
+    image = Image.fromarray(image_np)
+    image = image.resize((256, 256))
 
     if image.mode == 'RGBA':
         image = image.convert('RGB')
