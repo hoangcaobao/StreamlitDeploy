@@ -30,6 +30,15 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    ### About the Project
+    With the rapid progress in autonomous driving technology, detecting and classifying road signs has become a critical task. Road signs provide essential information for safe and efficient navigation, making their accurate detection indispensable for modern autonomous vehicles.
+
+    This project leverages cutting-edge **Computer Vision** and **Deep Learning** techniques to build and evaluate high-performance road sign detection models. The models are trained on diverse road sign images collected from Google Images, Google Shopping, and Kaggle, covering 4 categories **Stop**, **Speed Limit**, **Traffic Light**, and **Cross Walk**.
+
+    You can upload an image of a road sign below to see how well our fine-tuned models (ResNet and VGG) can classify it!
+""")
+
 option = st.selectbox(
     "Which Computer Vision Architectures you want to use?",
     ("VGG", "ResNet"),
